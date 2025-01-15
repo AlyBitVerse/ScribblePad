@@ -1,5 +1,152 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.wrapper{
+    /* width: 90%; */
+    height: 100vh;
+    display:flex;
+    gap: 1rem;
+}
+
+main {
+    width: 100%;
+    margin-top: 1.25rem;
+}
+
+.sidebar {
+    height: 100%;
+    width: 70px;
+    border-right: 1px solid rgb(179, 179, 179);
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+}
+
+.sidebar .plus{
+    height: 50px;
+    width: 50px;
+    background: #333;
+    color: white;
+    border-radius: 100%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.notes-container .card{
+    height: 300px;
+    background: #91f0a1;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.notes-container .card:hover{
+    cursor: pointer;
+
+}
+.notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 32px;
+    margin: 1.25rem auto;
+}
+
+.notes-container .card .content, 
+.notes-container .card .actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem;
+}
+
+.notes-container .card .content p {
+    
+}
+
+.notes-container .card .content caption {
+
+}
+
+.searchbox {
+    width: 100%; 
+    max-width: 400px; 
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd; 
+    border-radius: 25px; 
+    padding: 5px 15px; 
+    background-color: #f4f4f4; 
+  }
+.search-input {
+    width: 100%; 
+    border: none; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px; 
+    outline: none;
+    background-color: transparent; 
+  }
+
+.search-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none; 
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.action {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width: 36px;
+    height: 36px;
+
+}
+
+.action:hover {
+    cursor: pointer;   
+}
+
+.notes-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1.5rem;
 }
